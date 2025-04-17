@@ -23,7 +23,7 @@ function AboutMe() {
                       </span>
                     </p>
                     <p className="text-2xl text-white">A passionate and enthusiastic graduate Software Engineer, from
-                        Swansea University.</p>
+                        South Wales.</p>
                     <p className="text-2xl text-white">In my free time, you will catch me
                         playing some marginally above average hockey, running or chilling out with my many pets.</p>
                     <p className="text-2xl text-white">My tech stack ranges from C# / .NET within an industrial
