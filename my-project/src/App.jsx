@@ -5,6 +5,8 @@ import './App.css'
 import NavBar from "./Components/NavBar.jsx";
 import rhoss from './assets/rhossili.jpg'
 import AboutMe from "./Components/AboutMe.jsx";
+import Footer from './Components/Footer.jsx';
+import ContactForm from './Components/ContactForm.jsx';
 
 function App() {
 
@@ -17,9 +19,11 @@ function App() {
         width: '100vw',
         margin: 0,
         padding: 0,
-        overflow: 'hidden'}}>
-        <NavBar page="page"/>
+        overflow: 'scroll'}}>
+        <NavBar page="home"/>
         <AboutMe/>
+        <ContactForm key="contact-form"/>
+        <Footer/>
     </div>
   )
 }

@@ -4,11 +4,18 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import {faDownload} from "@fortawesome/fontawesome-free-solid";
 import {Typewriter} from "react-simple-typewriter";
+import {useInView} from "react-intersection-observer";
 
 function AboutMe() {
+    
+    const {ref, inView} = useInView({
+        threshold:1,
+        }); 
+
     return (
-        <div className="relative w-2/3 h-1/2 mx-auto mt-72">
-            <div className="absolute inset-0 bg-opacity-40 bg-sky-950 rounded-md shadow-lg"></div>
+        <div className={`relative w-2/3 h-1/2 mx-auto mt-72 transition-opacity duration-1000 ${inView ? "opacity-100" : "opacity-0"
+            }`} ref={ref}>
+            <div className="absolute inset-0 bg-opacity-40 bg-sky-950 rounded-md shadow-lg "></div>
 
             <div className="relative flex flex-row">
                 <div className="inset-0 flex flex-col items-center pt-10 px-4 space-y-4">
