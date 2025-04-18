@@ -5,57 +5,83 @@ import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import {faDownload} from "@fortawesome/fontawesome-free-solid";
 import {Typewriter} from "react-simple-typewriter";
 import {useInView} from "react-intersection-observer";
+import {Element} from "react-scroll";
 
 function AboutMe() {
     
     const {ref, inView} = useInView({
         threshold:1,
-        }); 
+        });
 
     return (
-        <div className={`relative w-2/3 h-1/2 mx-auto mt-72 transition-opacity duration-1000 ${inView ? "opacity-100" : "opacity-0"
-            }`} ref={ref}>
-            <div className="absolute inset-0 bg-opacity-40 bg-sky-950 rounded-md shadow-lg "></div>
+        <Element name="aboutme">
+            <div
+                ref={ref}
+                className={`relative w-11/12 max-w-6xl mx-auto mt-0 px-4 py-10 rounded-md shadow-lg transition-opacity duration-1000 ${
+                    inView ? "opacity-100" : "opacity-0"
+                }`}
+            >
+                {/* Background that grows with content */}
+                <div className="absolute inset-0 bg-sky-950 bg-opacity-40 rounded-md z-0" />
 
-            <div className="relative flex flex-row">
-                <div className="inset-0 flex flex-col items-center pt-10 px-4 space-y-4">
-                    <p className="text-5xl text-white font-bold">Hi, I'm <span>
-                        <Typewriter
-                            words={['Osian.', 'a software engineer.', "Osian."]}
-                            loop={1}
-                            typeSpeed={70}
-                            deleteSpeed={50}
-                            delaySpeed={3000}
-                        />
-                      </span>
-                    </p>
-                    <p className="text-2xl text-white">A passionate and enthusiastic graduate Software Engineer, from
-                        South Wales.</p>
-                    <p className="text-2xl text-white">In my free time, you will catch me
-                        playing some marginally above average hockey, running or chilling out with my many pets.</p>
-                    <p className="text-2xl text-white">My tech stack ranges from C# / .NET within an industrial
-                        setting, to React and Ethereum blockchain research within academia.</p>
-                    <div className="flex flex-row text-6xl text-white space-x-6">
-                        <a href="https://github.com/osianrjones"><FontAwesomeIcon icon={faGithub} className="hover:text-7xl"/></a>
-                        <a href="https://www.linkedin.com/in/osian-jones-5a46381bb/"><FontAwesomeIcon icon={faLinkedin} className="hover:text-7xl"/></a>
-                    </div>
-                    <div className="flex flex-row text-white space-x-4">
-                        <button
-                            className="flex items-center gap-2 px-6 py-2 text-3xl border-2 border-orange-500 rounded-2xl bg-transparent hover:bg-orange-500 hover:text-black transition-colors">
-                            <FontAwesomeIcon icon={faDownload}/>
-                            Resume
-                        </button>
+                <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start gap-10">
+                    {/* Text Section */}
+                    <div className="flex flex-col items-center lg:items-start space-y-4 text-white">
+                        <p className="text-5xl font-bold text-center lg:text-left">
+                            Hi, I'm{" "}
+                            <span>
+                <Typewriter
+                    words={["Osian.", "a software engineer.", "Osian."]}
+                    loop={1}
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={3000}
+                />
+              </span>
+                        </p>
 
-                        <button
-                            className="px-6 py-2 text-3xl border-2 border-white rounded-2xl bg-transparent hover:bg-white hover:text-black transition-colors">
-                            Contact
-                        </button>
+                        <p className="text-2xl text-center lg:text-left">
+                            A passionate and enthusiastic graduate Software Engineer, from South Wales.
+                        </p>
+                        <p className="text-2xl text-center lg:text-left">
+                            In my free time, you will catch me playing some marginally above average hockey,
+                            running or chilling out with my many pets.
+                        </p>
+                        <p className="text-2xl text-center lg:text-left">
+                            My tech stack ranges from C# / .NET within an industrial setting, to React and Ethereum
+                            blockchain research within academia.
+                        </p>
+
+                        {/* Icons */}
+                        <div className="flex flex-row text-5xl space-x-6 pt-4 justify-center lg:justify-start">
+                            <a href="https://github.com/osianrjones">
+                                <FontAwesomeIcon icon={faGithub} className="hover:scale-110 transition-transform" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/osian-jones-5a46381bb/">
+                                <FontAwesomeIcon icon={faLinkedin} className="hover:scale-110 transition-transform" />
+                            </a>
+                        </div>
+
+                        {/* Buttons */}
+                        <div className="flex flex-row space-x-4 pt-4">
+                            <button className="flex items-center gap-2 px-6 py-2 text-3xl border-2 border-orange-500 rounded-2xl bg-transparent hover:bg-orange-500 hover:text-black transition-colors">
+                                <FontAwesomeIcon icon={faDownload} />
+                                Resume
+                            </button>
+
+                            <button className="px-6 py-2 text-3xl border-2 border-white rounded-2xl bg-transparent hover:bg-white hover:text-black transition-colors">
+                                Contact
+                            </button>
+                        </div>
                     </div>
+
+                    {/* Image */}
+                    <img src={me} alt="Memoji of Osian" className="w-48 md:w-64 lg:w-72 object-contain" />
                 </div>
-                <img src={me} alt={"A photo of myself, but in MeMoji form."} className="pb-8"/>
             </div>
-        </div>
-    )
+        </Element>
+    );
+
 }
 
 export default AboutMe;
