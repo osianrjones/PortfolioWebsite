@@ -37,7 +37,7 @@ const ContactForm = () => {
             } container mx-auto p-4 mt-5 mb-32 relative w-1/2`} ref={ref} >
                  <div className="absolute inset-0 bg-opacity-40 bg-sky-950 rounded-md shadow-lg"></div>
     <div className="relative text-white">
-      <h2 className="inset-0 text-4xl font-bold text-center mb-4 text-white">Contact Me</h2>
+      <h2 className="inset-0 text-4xl font-bold text-center mb-4 text-white">Contact Me!</h2>
       <form ref={form} onSubmit={handleSubmit} className="max-w-md mx-auto bg-sky-950 shadow-md rounded-lg p-6">
         <div className="mb-4">
           <label htmlFor="name" className="block text-sm font-bold mb-2">

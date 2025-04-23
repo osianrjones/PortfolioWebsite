@@ -8,7 +8,9 @@ import AboutMe from "./Components/AboutMe.jsx";
 import Footer from './Components/Footer.jsx';
 import ContactForm from './Components/ContactForm.jsx';
 import { Scrollbar } from 'react-scrollbars-custom';
-import Projects from "./Components/Projects.jsx";
+import Projects from "./Components/Projects/Projects.jsx";
+import Experience from "./Components/Experience/Experience.jsx";
+import University from "./Components/University/University.jsx";
 
 function App() {
 
@@ -26,7 +28,9 @@ function App() {
           <div className="w-[90%] h-[95%] mx-auto pr-8">
               <Scrollbar className="mt-40 text-sky-950" style={{ width: '100%', height: '75%' }} noScrollX>
                     <AboutMe/>
+                    <University/>
                     <Projects/>
+                    <Experience/>
                     <ContactForm key="contact-form"/>
               </Scrollbar>
           </div>

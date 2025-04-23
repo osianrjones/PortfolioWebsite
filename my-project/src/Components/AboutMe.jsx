@@ -6,6 +6,7 @@ import {faDownload} from "@fortawesome/fontawesome-free-solid";
 import {Typewriter} from "react-simple-typewriter";
 import {useInView} from "react-intersection-observer";
 import {Element} from "react-scroll";
+import resume from "../../public/resume.pdf";
 
 function AboutMe() {
     
@@ -64,10 +65,10 @@ function AboutMe() {
 
                         {/* Buttons */}
                         <div className="flex flex-row space-x-4 pt-4">
-                            <button className="flex items-center gap-2 px-6 py-2 text-3xl border-2 border-orange-500 rounded-2xl bg-transparent hover:bg-orange-500 hover:text-black transition-colors">
+                            <a href={resume} download><button className="flex items-center gap-2 px-6 py-2 text-3xl border-2 border-orange-500 rounded-2xl bg-transparent hover:bg-orange-500 hover:text-black transition-colors">
                                 <FontAwesomeIcon icon={faDownload} />
                                 Resume
-                            </button>
+                            </button></a>
 
                             <button className="px-6 py-2 text-3xl border-2 border-white rounded-2xl bg-transparent hover:bg-white hover:text-black transition-colors">
                                 Contact

@@ -4,9 +4,9 @@ import React from "react";
 const EthProject = () => {
     return (
     <div className="relative text-white flex flex-row lg:flex-col space-y-5 mt-5">
-        <p className="text-2xl">Creating a system for smart and secure voting using Ethereum smart
+        <p className="text-3xl">Creating a system for smart and secure voting using Ethereum smart
             contracts.</p>
-        <p> Within this project, I have developed a voting system using Solidity smart contracts on the Ethereum
+        <p className="text-xl"> Within this project, I have developed a voting system using Solidity smart contracts on the Ethereum
             network,
             capable of tackling the challenges we currently face with in-person ballot voting.
             This solution tackles the most prevalent problems faced by ballot voting, such as cost,
