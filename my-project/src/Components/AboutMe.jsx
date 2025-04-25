@@ -7,17 +7,26 @@ import {Typewriter} from "react-simple-typewriter";
 import {useInView} from "react-intersection-observer";
 import {Element} from "react-scroll";
 import resume from "../../public/resume.pdf";
+import {forwardRef, useCallback} from "react";
 
-function AboutMe() {
-    
-    const {ref, inView} = useInView({
-        threshold:1,
-        });
+const AboutMe = forwardRef((props, ref) => {
+    const { ref: inViewRef, inView } = useInView({
+        threshold: 0.4,
+    });
+
+    // Combine the forwarded ref and the inView ref
+    const setRefs = useCallback(
+        (node) => {
+            if (ref) ref.current = node;
+            inViewRef(node);
+        },
+        [ref, inViewRef]
+    );
 
     return (
         <Element name="aboutme">
             <div
-                ref={ref}
+                ref={setRefs}
                 className={`relative w-11/12 max-w-6xl mx-auto mt-0 px-4 py-10 rounded-md shadow-lg transition-opacity duration-1000 ${
                     inView ? "opacity-100" : "opacity-0"
                 }`}
@@ -83,6 +92,6 @@ function AboutMe() {
         </Element>
     );
 
-}
+});
 
 export default AboutMe;

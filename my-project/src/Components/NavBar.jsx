@@ -1,33 +1,38 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {Link} from 'react-scroll'
 
-function NavBar(page) {
+function NavBar({page, eduRef, aboutRef, projectsRef, experienceRef}) {
     const [currentPage, setSelectedPage] = useState(page);
+
+    function selectElement(ref, page) {
+        ref.current?.scrollIntoView(
+            {behavior: 'smooth', block:'nearest'});
+        setSelectedPage(page);
+    }
 
     return (
         <nav className="absolute top-0 left-0 right-0 w-full h-20 bg-sky-950 z-20">
             <div className="flex text-white justify-center space-x-20 mt-5 font-bold text-3xl">
 
-                <Link
-                    to="aboutme"
-                    smooth={true}
-                    duration={500}
-                    offset={-50}
-                    className={currentPage.page === "home" ? "underline" : ""} id="home">
+                <button id="about"
+                        onClick={() => selectElement(aboutRef, "about")}>
                     /Home
-                </Link>
-                <p className={currentPage.page === "about" ? "underline" : ""} id="about">/About</p>
+                </button>
 
-                <p className={currentPage.page === "projects" ? "underline" : ""} id="projects">
-                    <Link
-                        to="projects"
-                        smooth={true}
-                        duration={500}
-                        offset={-50}>
-                        /Projects
-                    </Link>
-                </p>
-                <p className={currentPage.page === "experience" ? "underline" : ""} id="experience">/Experience</p>
+                <button id="education"
+                        onClick={() => selectElement(eduRef, "education")}>
+                    /Education
+                </button>
+
+                <button id="projects"
+                        onClick={() => selectElement(projectsRef, "projects")}>
+                    /Projects
+                </button>
+
+                <button id="experience"
+                        onClick={() => selectElement(experienceRef, "experience")}>
+                    /Experience
+                </button>
             </div>
         </nav>
     )

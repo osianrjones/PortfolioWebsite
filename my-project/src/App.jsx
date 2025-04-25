@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import {useRef, useState} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -13,6 +13,10 @@ import Experience from "./Components/Experience/Experience.jsx";
 import University from "./Components/University/University.jsx";
 
 function App() {
+    const eduRef = useRef();
+    const aboutRef = useRef();
+    const projectsRef = useRef();
+    const experienceRef = useRef();
 
   return (
     <div className="custom-scrollbars__content" style={{ backgroundImage: `url(${rhoss})`,
@@ -23,14 +27,15 @@ function App() {
         width: '100vw',
         margin: 0,
         padding: 0,
-        overflow: 'auto'}}>
-        <NavBar page="home"/>
+        overflow: 'hidden'}}>
+        <NavBar page="home" eduRef={eduRef} aboutRef={aboutRef}
+                projectsRef={projectsRef} experienceRef={experienceRef}/>
           <div className="w-[90%] h-[95%] mx-auto pr-8">
-              <Scrollbar className="mt-40 text-sky-950" style={{ width: '100%', height: '75%' }} noScrollX>
-                    <AboutMe/>
-                    <University/>
-                    <Projects/>
-                    <Experience/>
+              <Scrollbar className="mt-40 text-sky-950" style={{ width: '100%', height: '83%' }} noScrollX>
+                    <AboutMe ref={aboutRef}/>
+                    <University ref={eduRef}/>
+                    <Projects ref={projectsRef}/>
+                    <Experience ref={experienceRef}/>
                     <ContactForm key="contact-form"/>
               </Scrollbar>
           </div>
