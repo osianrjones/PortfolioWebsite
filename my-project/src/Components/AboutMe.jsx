@@ -23,6 +23,13 @@ const AboutMe = forwardRef((props, ref) => {
         [ref, inViewRef]
     );
 
+    const moveToContact = () => {
+        const contactElement = document.getElementById("contact");
+        if (contactElement) {
+            contactElement.scrollIntoView({ behavior: "smooth" , block:'nearest'});
+        }
+    }
+
     return (
         <Element name="aboutme">
             <div
@@ -79,7 +86,7 @@ const AboutMe = forwardRef((props, ref) => {
                                 Resume
                             </button></a>
 
-                            <button className="px-6 py-2 text-3xl border-2 border-white rounded-2xl bg-transparent hover:bg-white hover:text-black transition-colors">
+                            <button onClick={() => moveToContact()} className="px-6 py-2 text-3xl border-2 border-white rounded-2xl bg-transparent hover:bg-white hover:text-black transition-colors">
                                 Contact
                             </button>
                         </div>

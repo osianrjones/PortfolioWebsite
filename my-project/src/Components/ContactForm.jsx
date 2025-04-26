@@ -10,7 +10,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically handle form submission, e.g., sending data to a server
+
     emailjs.sendForm('service_ux816co' , 'template_xtb09ox', form.current, 'v5xNEJjiK8q5CHYjz')
     .then(
         (result) => {
@@ -33,7 +33,7 @@ const ContactForm = () => {
     }); 
 
   return (
-    <div className={`transition-opacity duration-1000 ease-in-out ${ inView ? "opacity-100" : "opacity-0"
+    <div id="contact" className={`transition-opacity duration-1000 ease-in-out ${ inView ? "opacity-100" : "opacity-0"
             } container mx-auto p-4 mt-5 mb-32 relative w-1/2`} ref={ref} >
                  <div className="absolute inset-0 bg-opacity-40 bg-sky-950 rounded-md shadow-lg"></div>
     <div className="relative text-white">
@@ -89,6 +89,7 @@ const ContactForm = () => {
           </button>
         </div>
       </form>
+      <p className="text-[14px] italic text-slate-300 text-center mt-1">Created using <a className="underline" href="https://emailjs.com">EmailJS</a></p>
       </div>
     </div>
   );
