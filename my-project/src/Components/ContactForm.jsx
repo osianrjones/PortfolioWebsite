@@ -29,7 +29,7 @@ const ContactForm = () => {
   };
 
   const {ref, inView} = useInView({
-    threshold: 1,
+    threshold: .4,
     }); 
 
   return (

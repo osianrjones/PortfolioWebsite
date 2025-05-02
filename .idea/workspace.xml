@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="52ba6193-ed6f-43ea-939c-ccebe4b9a770" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project/src/Components/AboutMe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-project/src/Components/AboutMe.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-project/src/Components/ContactForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-project/src/Components/ContactForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +38,7 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/osian/Documents/GitHub/PortfolioWebsite/my-project/public&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -108,7 +108,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.19416.2" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
       </set>
     </attachedChunks>
   </component>
@@ -128,7 +128,10 @@
       <workItem from="1745406563153" duration="3492000" />
       <workItem from="1745568478529" duration="118000" />
       <workItem from="1745568841270" duration="5633000" />
-      <workItem from="1745672435179" duration="406000" />
+      <workItem from="1745672435179" duration="616000" />
+      <workItem from="1746005026858" duration="70000" />
+      <workItem from="1746005327043" duration="472000" />
+      <workItem from="1746174678819" duration="15000" />
     </task>
     <servers />
   </component>
