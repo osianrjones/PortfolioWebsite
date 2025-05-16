@@ -11,6 +11,8 @@ import { Scrollbar } from 'react-scrollbars-custom';
 import Projects from "./Components/Projects/Projects.jsx";
 import Experience from "./Components/Experience/Experience.jsx";
 import University from "./Components/University/University.jsx";
+import AboutMeMobile from './Components/mobile/AboutMeMobile';
+import UniversityMobile from './Components/mobile/UniversityMobile';
 
 function App() {
     const eduRef = useRef();
@@ -30,7 +32,7 @@ function App() {
         overflow: 'hidden'}}>
         <NavBar page="home" eduRef={eduRef} aboutRef={aboutRef}
                 projectsRef={projectsRef} experienceRef={experienceRef}/>
-          <div className="w-[90%] h-[95%] mx-auto pr-8">
+          <div className="w-[90%] h-[95%] mx-auto pr-8 md:block hidden">
               <Scrollbar className="mt-40 text-sky-950" style={{ width: '100%', height: '83%' }} noScrollX>
                     <AboutMe ref={aboutRef}/>
                     <University ref={eduRef}/>
@@ -38,6 +40,11 @@ function App() {
                     <Experience ref={experienceRef}/>
                     <ContactForm key="contact-form"/>
               </Scrollbar>
+          </div>
+          <div className="md:hidden block items-center justify-center h-screen p-4 overflow-scroll">
+            <AboutMeMobile/>
+            <UniversityMobile/>
+            <ContactForm key="contact-form"/>
           </div>
         <Footer/>
     </div>

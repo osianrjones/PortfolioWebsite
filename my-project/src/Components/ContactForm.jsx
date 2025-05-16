@@ -34,7 +34,7 @@ const ContactForm = () => {
 
   return (
     <div id="contact" className={`transition-opacity duration-1000 ease-in-out ${ inView ? "opacity-100" : "opacity-0"
-            } container mx-auto p-4 mt-5 mb-32 relative w-1/2`} ref={ref} >
+            } container mx-auto p-4 mt-5 mb-32 relative md:w-1/2 w-full`} ref={ref} >
                  <div className="absolute inset-0 bg-opacity-40 bg-sky-950 rounded-md shadow-lg"></div>
     <div className="relative text-white">
       <h2 className="inset-0 text-4xl font-bold text-center mb-4 text-white">Contact Me!</h2>
