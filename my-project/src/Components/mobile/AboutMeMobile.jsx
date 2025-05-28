@@ -11,11 +11,11 @@ export default function AboutMeMobile() {
     });
 
     return (
-        <div className={`transition-opacity duration-1000 ease-in-out
-         bg-sky-950 rounded-2xl bg-opacity-40 w-full h-1/2 items-start text-3xl font-bold text-white pl-2 
+        <div className={`transition-opacity duration-1000 ease-in-out items-center justify-center
+         bg-sky-950 rounded-2xl bg-opacity-40 w-full h-1/2 text-3xl font-bold text-white pl-2 
          ${ inView ? "opacity-100" : "opacity-0"}`} ref={ref}>
-            <p className="pl-2">
-                Hi 👋, I'm{" "}
+            <p className="pl-2 mt-4">
+                Hey 👋, I'm{" "}
                 <span>
                     <Typewriter
                         words={["Osian.", "a software engineer.", "Osh."]}

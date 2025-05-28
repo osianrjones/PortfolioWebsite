@@ -14,6 +14,11 @@ function NavBar({page, eduRef, aboutRef, projectsRef, experienceRef}) {
         setSelectedPage(page);
     }
 
+    function contact() {
+        const contactRef = document.getElementById("contact");
+        contactRef?.scrollIntoView({ behavior: 'smooth' });
+    }
+
     return (
         <>
         <nav className="md:block hidden absolute top-0 left-0 right-0 w-full h-20 bg-sky-950 z-20">
@@ -52,8 +57,8 @@ function NavBar({page, eduRef, aboutRef, projectsRef, experienceRef}) {
                         Resume
                     </button>
                 </a>
-                <a href={resume} download className="absolute top-7 -left-32 text-lg">
-                    <button className="hover:bg-sky-950 bg-sky-950 border-orange-400 border-2 rounded flex items-center gap-2 px-4 py-1">
+                <a onClick={contact} className="absolute top-7 -left-32 text-lg">
+                    <button onClick={contact} className="hover:bg-sky-950 bg-sky-950 border-orange-400 border-2 rounded flex items-center gap-2 px-4 py-1">
                         Contact
                     </button>
                 </a>

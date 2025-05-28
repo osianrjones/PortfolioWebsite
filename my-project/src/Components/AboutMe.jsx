@@ -11,7 +11,7 @@ import {forwardRef, useCallback} from "react";
 
 const AboutMe = forwardRef((props, ref) => {
     const { ref: inViewRef, inView } = useInView({
-        threshold: 0.4,
+        threshold: 1,
     });
 
     // Combine the forwarded ref and the inView ref

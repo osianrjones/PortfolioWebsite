@@ -2,7 +2,7 @@ import { useInView } from "react-intersection-observer";
 
 export default function UniversityMobile() {
     const [view, inView] = useInView({
-        threshold: .5,
+        threshold: .4,
     })
     return (
         <div className={`relative text-white bg-sky-950 bg-opacity-40 mt-6 rounded-2xl p-4 transition-opacity duration-1000 ease-in-out  ${ inView ? "opacity-100" : "opacity-0"}`} ref={view}>
